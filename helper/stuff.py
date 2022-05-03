@@ -33,8 +33,7 @@ async def start(event):
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/CompressorBot"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("Join Channel", url="t.me/RXbots"),
             ],
         ],
     )
@@ -42,14 +41,14 @@ async def start(event):
 
 async def help(event):
     await event.reply(
-        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options"
+        "🤖A Quality CompressorBot🤖\n\n\n⭕This Bot🤖Compress Videos🎥 With Negligible Quality Change😍.\n\n⭕Generate Sample Compressed Video🎥\n\n⭕Easy to Use😎\n\n⭕Due to Quality Settings Bot🤖Takes Time🕐To Compress.🤧\n⭕So Send videos One By One After Completing😔.\n\n🛑Don't Spam Bot🤕.\n\n\n⭕Just Forward Video To Get Options😎"
     )
 
 
 async def ihelp(event):
     await event.edit(
-        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Screenshots Too\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options",
-        buttons=[Button.inline("BACK", data="beck")],
+        "🤖A Quality CompressorBot🤖\n\n\n⭕This Bot🤖Compress Videos🎥 With Negligible Quality Change😍.\n\n⭕Generate Sample Compressed Video🎥\n\n⭕Easy to Use😎\n\n⭕Due to Quality Settings Bot🤖Takes Time🕐To Compress.🤧\n⭕So Send videos One By One After Completing😔.\n\n🛑Don't Spam Bot🤕.\n\n\n⭕Just Forward Video To Get Options😎",
+       buttons=[Button.inline("BACK", data="beck")],
     )
 
 
