@@ -29,7 +29,7 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
+        f"Hi `{ok.user.first_name}`\n😇This is A CompressorBot🤖 Which Can Encode👻 Videos.\n💁Reduce Size 🔥of Videos With Negligible 💨💯Quality Change\n🤘you can Generate Samples/screenshots🖼️.",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
@@ -55,12 +55,11 @@ async def ihelp(event):
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
+        f"Hi `{ok.user.first_name}`\n😇This is A CompressorBot🤖 Which Can Encode👻 Videos.\n💁Reduce Size 🔥of Videos With Negligible 💨💯Quality Change\n🤘you can Generate Samples/screenshots🖼️.",
         buttons=[
             [Button.inline("HELP", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("Join Channel", url="t.me/RXbots"),
             ],
         ],
     )
@@ -83,7 +82,7 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "🐠  **What To Do** 🐠",
+        🛑"What you want💁 \nfrom below👇 things🤓",
         buttons=[
             [
                 Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
@@ -95,7 +94,7 @@ async def back(e):
 
 
 async def ccom(e):
-    await e.edit("Send Ur Custom Name For That File")
+    await e.edit("🏹Send your🤘 Custom Name😁 For That File👆")
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
@@ -110,7 +109,7 @@ async def ccom(e):
             g = repl.text + ".mkv"
         outt = f"encode/{chat}/{g}"
         x = await repl.reply(
-            f"Custom File Name : {g}\n\nSend Thumbnail Picture For it."
+            f"Custom File Name : {g}\n\n🏹Send Thumbnail Picture🖼️ For it💁."
         )
         replyy = cv.wait_event(events.NewMessage(from_users=chat))
         rep = await replyy
@@ -122,7 +121,7 @@ async def ccom(e):
             tb = url.replace("https://telegra.ph/file/", "")
         else:
             tb = thum
-        omk = await rep.reply(f"Thumbnail {tb} Setted Successfully")
+        omk = await rep.reply(f"Thumbnail {tb} 🖼️Setted Successfully😇")
         hehe = f"{outt};{dl};{tb};{dtime}"
         key = code(hehe)
         await customenc(omk, key)
