@@ -208,7 +208,7 @@ async def encod(event):
             oc = event.fwd_from.from_id.user_id
             occ = (await event.client.get_me()).id
             if oc == occ:
-                return await event.reply("`This Video File is already Compressed 😑😑.`")
+                return await event.reply("`👆This Video🎥File is already🤘Compressed⚙️ 😑😑.`")
         except BaseException:
             pass
         xxx = await event.reply("`⬇️Downloading...📪`")
@@ -224,12 +224,12 @@ async def encod(event):
         if len(COUNT) > 4 and user.id != OWNER:
             llink = (await event.client(cl(LOG))).link
             return await xxx.edit(
-                "Overload Already 5 Process Running",
+                "😌😌I can only do 5 processes 📝 at one time🕐\n⚠️Overload😤Already 5 Process📝 Running⚙️",
                 buttons=[Button.url("Working Status", url=llink)],
             )
         if user.id in COUNT and user.id != OWNER:
             return await xxx.edit(
-                "Already Your 1 Request Processing\nKindly Wait For it to Finish"
+                "😤What are 💁you doing🤬.\n👆Already Your 1 Request📝 Processing⚙️\n😌Kindly Wait For🕐 it to Finish🔥"
             )
         COUNT.append(user.id)
         s = dt.now()
@@ -264,7 +264,7 @@ async def encod(event):
                                 t,
                                 xxx,
                                 ttt,
-                                "Downloading",
+                                "⬇️Downloading📪",
                             )
                         ),
                     )
@@ -273,7 +273,7 @@ async def encod(event):
                     event.media,
                     dir,
                     progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                        progress(d, t, xxx, ttt, "Downloading")
+                        progress(d, t, xxx, ttt, "⬇️Downloading📪")
                     ),
                 )
         except Exception as er:
@@ -297,7 +297,7 @@ async def encod(event):
         COUNT.remove(user.id)
         await event.client.send_message(
             event.chat_id,
-            f"🐠DOWNLODING COMPLETED!!🐠",
+            f"⬇️Download ✓Completed✓🤘\n👇what🧐you want💁from below👇 menu📃",
             buttons=[
                 [
                     Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
@@ -319,7 +319,7 @@ async def customenc(e, key):
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
     nn = await e.edit(
-        "`Compressing..`",
+        "`📝Compressing..⚙️`",
         buttons=[
             [Button.inline("STATS", data=f"stats{wah}")],
             [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
@@ -333,7 +333,7 @@ async def customenc(e, key):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n⚠️Error⚠️ contact📞 my admins💁 \n or read what are the  ⚙️instructions in /help command")
             COUNT.remove(e.chat_id)
             os.remove(dl)
             return os.remove(out)
@@ -343,7 +343,7 @@ async def customenc(e, key):
     ees = dt.now()
     ttt = time.time()
     await nn.delete()
-    nnn = await e.client.send_message(e.chat_id, "`Uploading...`")
+    nnn = await e.client.send_message(e.chat_id, "`📤Uploading...⬆️`")
     try:
         with open(out, "rb") as f:
             ok = await upload_file(
@@ -351,7 +351,7 @@ async def customenc(e, key):
                      file=f,
                      name=out,
                      progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                         progress(d, t, nnn, ttt, "uploading..")
+                         progress(d, t, nnn, ttt, "📤uploading..⬆️")
                          ),
                      )
         ds = await e.client.send_file(
@@ -376,7 +376,7 @@ async def customenc(e, key):
     a1 = await info(dl, e)
     a2 = await info(out, e)
     dk = await ds.reply(
-        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1})//[After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}",
+        f"Original Size : {hbs(org)}\nCompressed Size : {hbs(com)}\nCompressed Percentage : {per}\n\nMediainfo: [Before]({a1})//[After]({a2})\n\n⬇️Downloaded in🕐 {x}\n⚙️Compressed in🕐 {xx}\n📤Uploaded in🕐 {xxx}",
         link_preview=False,
     )
     await ds.forward_to(LOG)
