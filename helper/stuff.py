@@ -82,7 +82,7 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        🛑"What you want💁 \nfrom below👇 things🤓",
+        "🛑What you want💁 \nfrom below👇 things🤓",
         buttons=[
             [
                 Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
