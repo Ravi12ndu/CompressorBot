@@ -17,7 +17,7 @@ from .funcn import *
 from .FastTelethon import download_file, upload_file
 
 async def screenshot(e):
-    await e.edit("`Generating Screenshots...`")
+    await e.edit("`😋Generating Screenshots🖼️...`")
     COUNT.append(e.chat_id)
     wah = e.pattern_match.group(1).decode("UTF-8")
     key = decode(wah)
@@ -35,7 +35,7 @@ async def screenshot(e):
         await e.client.send_file(e.chat_id, pic)
         await e.client.send_message(
             e.chat_id,
-            "Check Screenshots Above 😁",
+            "🧐Check Screenshots🖼️ Above 😁",
             buttons=[
                 [
                     Button.inline("GENERATE SAMPLE", data=f"gsmpl{wah}"),
@@ -62,7 +62,7 @@ async def stats(e):
         ans = f"Downloaded:\n{ov}\n\nCompressing:\n{ot}"
         await e.answer(ans, cache_time=0, alert=True)
     except BaseException:
-        await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
+        await e.answer("😨Someting Went Wrong 🤔\nResend Media👆", cache_time=0, alert=True)
 
 
 async def encc(e):
@@ -73,7 +73,7 @@ async def encc(e):
         wh = decode(wah)
         out, dl, thum, dtime = wh.split(";")
         nn = await e.edit(
-            "`Compressing..`",
+            "`💁Compressing..😋 \n 📝For details🤓 press the 👉STATS👈 Button below 👇\n ⭕don't do that again and again \nbecause it will be carck⚠️ my system⚙️`",
             buttons=[
                 [Button.inline("STATS", data=f"stats{wah}")],
                 [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
@@ -87,7 +87,7 @@ async def encc(e):
         er = stderr.decode()
         try:
             if er:
-                await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+                await e.edit(str(er) + "\n\n⚠️Error⚠️ contact📞 my admins💁 \n or read what in /help command")
                 COUNT.remove(e.chat_id)
                 os.remove(dl)
                 return os.remove(out)
@@ -96,14 +96,14 @@ async def encc(e):
         ees = dt.now()
         ttt = time.time()
         await nn.delete()
-        nnn = await e.client.send_message(e.chat_id, "`Uploading...`")
+        nnn = await e.client.send_message(e.chat_id, "`⬆️Uploading...📤`")
         with open(out, "rb") as f:
             ok = await upload_file(
                      client=e.client,
                      file=f,
                      name=out,
                      progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                         progress(d, t, nnn, ttt, "uploading..")
+                         progress(d, t, nnn, ttt, "⬆️uploading..📤")
                          ),
                      )
         ds = await e.client.send_file(
@@ -143,7 +143,7 @@ async def sample(e):
     out, dl, thum, dtime = wh.split(";")
     ss, dd = await duration_s(dl)
     xxx = await e.edit(
-        "`Generating Sample...`",
+        "`😋Generating Sample...📝`",
         buttons=[
             [Button.inline("STATS", data=f"stats{wah}")],
             [Button.inline("CANCEL PROCESS", data=f"skip{wah}")],
@@ -173,7 +173,7 @@ async def sample(e):
             force_document=False,
             thumb=thum,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
-                progress(d, t, xxx, ttt, "uploading..", file=f"{out}")
+                progress(d, t, xxx, ttt, "⬆️uploading..📤", file=f"{out}")
             ),
             buttons=[
                 [
@@ -211,9 +211,9 @@ async def encod(event):
                 return await event.reply("`This Video File is already Compressed 😑😑.`")
         except BaseException:
             pass
-        xxx = await event.reply("`Downloading...`")
+        xxx = await event.reply("`⬇️Downloading...📪`")
         """ For Force Subscribe Channel"""
-        # pp = []
+       # pp = []
         # async for x in event.client.iter_participants("put group username"):
         #    pp.append(x.id)
         # if (user.id) not in pp:
