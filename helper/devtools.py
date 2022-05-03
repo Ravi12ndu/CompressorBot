@@ -18,7 +18,7 @@ from .stuff import *
 async def eval(event):
     if event.sender_id != OWNER:
         return
-    await event.reply("Processing .../n Touch on STATS👇 for compression details!😇 ")
+    await event.reply("😁Processing ...😋 /n ⭕if I was busy it takes some time🤕 ")
     cmd = event.text.split(" ", maxsplit=1)[1]
     old_stderr = sys.stderr
     old_stdout = sys.stdout
